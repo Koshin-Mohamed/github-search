@@ -1,4 +1,7 @@
+import { Search } from '../Username';
 import { Component, OnInit } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-display-user',

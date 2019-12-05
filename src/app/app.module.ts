@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { DisplayUserComponent } from './display-user/display-user.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
