@@ -1,5 +1,7 @@
-import { Search } from '../Username';
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Repository } from './../repository';
+import { Username } from './../username';
 
 
 
