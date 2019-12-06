@@ -7,13 +7,15 @@ import { SearchFormComponent } from './search-form/search-form.component';
 import { DisplayUserComponent } from './display-user/display-user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { DisplayRepoComponent } from './display-repo/display-repo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchFormComponent,
     DisplayUserComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    DisplayRepoComponent
   ],
   imports: [
     BrowserModule,
