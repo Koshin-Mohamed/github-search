@@ -9,9 +9,8 @@ import { DisplayRepoComponent } from './display-repo/display-repo.component';
 import { FormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http';
 import { DetailsComponent } from './details/details.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { SearchComponent } from './search/search.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -19,9 +18,8 @@ import { MainPageComponent } from './main-page/main-page.component';
     DisplayUserComponent,
     DisplayRepoComponent,
     DetailsComponent,
-    LandingPageComponent,
-    SearchComponent,
-    MainPageComponent
+    MainPageComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
