@@ -1,13 +1,9 @@
-<form>
-    <h1><i class="fab fa-github"></i> Search</h1>
+<form (ngSubmit)="searchFor(searchForm)" #searchForm="ngForm">
+    
     <div class="input-group mb-1">
-      <div class="input-group-prepend">
-        <div class="input-group-text">@</div>
-      </div>
-      <input type="text" class="form-control" id="username" placeholder="Search username or repository">
+      <input type="text" class="form-control" name="find" id="username" placeholder="Search username or repository" [(ngModel)]= "searchInfo.find"  #find='ngModel'>
       <div class="input-group-append">
-      <button type="submit" class="btn btn-primary" routerLink="/details"><i class="fas fa-search"></i></button>
+      <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
       </div>
     </div>
   </form>
-  <footer>All rights reserved. Github-Search was developed by Koshin Mohamed. Powered by Github API.</footer>

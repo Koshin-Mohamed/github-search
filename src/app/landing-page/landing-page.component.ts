@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Search } from './../search';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-landing-page',
@@ -7,6 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
+  searchInfo = new Search('');
+    @Output() getName = new EventEmitter<Search>();
+    
+    searchFor(data){
+      this.getName.emit(data.value.find);
+      console.log(data.value.find)
+      data.reset();
+    }
+  
   constructor() { }
 
   ngOnInit() {

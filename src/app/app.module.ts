@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http';
 import { DetailsComponent } from './details/details.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { SearchComponent } from './search/search.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     DisplayUserComponent,
     DisplayRepoComponent,
     DetailsComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    SearchComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
