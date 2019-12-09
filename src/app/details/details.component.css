@@ -4,14 +4,6 @@ h1 {
   text-align: center; 
 }
 
-footer {
-  bottom: 0px;
-  left: 50%;
-  position: fixed;
-  transform: translate(-50%,0%);
-  text-align: center;
-}
-
 #margin {
   margin: 0 80px;
 }
@@ -20,6 +12,3 @@ footer {
   position: sticky;
 }
 
-button{
-  margin: 5% 30%;
-}

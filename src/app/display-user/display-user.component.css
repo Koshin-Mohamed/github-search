@@ -1,4 +1,6 @@
-#user{
-  margin-top: 20px;
-  position: sticky;
+#user, #repo{
+  margin-top: 20px; 
+}
+button{
+  margin: 5% 30%;
 }

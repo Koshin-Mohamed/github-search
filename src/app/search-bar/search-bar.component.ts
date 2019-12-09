@@ -1,24 +1,25 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core'
-import { Search } from '../search';
+import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 
 @Component({
-  selector: 'app-search-bar',
-  templateUrl: './search-bar.component.html',
-  styleUrls: ['./search-bar.component.css']
+  selector: "app-search-bar",
+  templateUrl: "./search-bar.component.html",
+  styleUrls: ["./search-bar.component.css"]
 })
 export class SearchBarComponent implements OnInit {
+  find: string;
+  
+  @Output() getName = new EventEmitter<any>()
+  @Output() getRepo = new EventEmitter<any>()
 
-  searchInfo = new Search('');
-    @Output() getName = new EventEmitter<Search>();
-    
-    searchFor(data){
-      this.getName.emit(data.value.find);
-      console.log(data.value.find)
-      data.reset();
-    }
-  constructor() { }
-
-  ngOnInit() {
+  gUsers() {
+    this.getName.emit(this.find);
   }
 
+  gRepos() {
+    this.getRepo.emit(this.find);
+  }
+
+  constructor() {}
+
+  ngOnInit() {}
 }

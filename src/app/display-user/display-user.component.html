@@ -1,7 +1,51 @@
-
-<div class="card" id="user">
-  <img src="" class="card-img-top" alt="" />
-  <div class="card-body">
-    <p class="card-text"></p>
+<app-search-bar (getName)="findUser($event)" (getRepo)="findRepo($event)"></app-search-bar>
+<br>
+<div class="row">
+  <div class="col-md-4">
+    <h1>User</h1>
+    <div class="card" id="user">
+      <h5 class="card-title">{{username.name}}</h5>
+      <img src="{{ username.avatar_url }}" class="card-img-top" alt="..." />
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <strong>Username :</strong> {{ username.login }}
+        </li>
+        <li class="list-group-item">
+          <strong>Profile :</strong> {{ username.html_url }}
+        </li>
+        <li class="list-group-item">
+          <strong># of Repos :</strong> {{ username.public_repos }}
+        </li>
+        <li class="list-group-item">
+          <strong>Date Created :</strong> {{ username.created_at }}
+        </li>
+      </ul>
+      <button type="button" class="btn btn-warning" routerLink="/main-page"> Go Back to Search</button>
+    </div>
   </div>
-</div>
+    <div class="col-md-8">
+      <h1>Repositories</h1>
+      <div
+        class="card"
+        id="repo"
+        *ngFor="let repository of repositories"
+      >
+        <div class="card-body">
+          <p class="card-text">
+            <strong>{{ repository.name }}</strong>
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <strong>Description :</strong> {{ repository.description }}
+          </li>
+          <li class="list-group-item">
+            <strong>Url :</strong> {{ repository.html_url }}
+          </li>
+          <li class="list-group-item">
+            <strong>Date Created :</strong> {{ repository.created_at }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>

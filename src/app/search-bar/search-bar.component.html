@@ -1,9 +1,10 @@
 <form (ngSubmit)="searchFor(searchForm)" #searchForm="ngForm">
-    
     <div class="input-group mb-1">
-      <input type="text" class="form-control" name="find" id="username" placeholder="Search username or repository" [(ngModel)]= "searchInfo.find"  #find='ngModel'>
+      <input type="text" class="form-control"  id="username"  placeholder="Search username or repository"
+      name="find" [(ngModel)]="find" name='find2' #find2='ngModel' ng-required="true">
+
       <div class="input-group-append">
-      <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+      <button type="submit" (click)="gUsers()" (click)="gRepos()" class="btn btn-primary"><i class="fas fa-search"></i></button>
       </div>
     </div>
   </form>
