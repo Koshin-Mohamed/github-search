@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { DetailsComponent } from './details/details.component';
 
 const routes: Routes = [
-  {path: "main-page", component: MainPageComponent},
+  {path: "", component: MainPageComponent},
   {path: "details", component: DetailsComponent},
 ];
 @NgModule({

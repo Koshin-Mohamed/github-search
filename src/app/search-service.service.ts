@@ -68,22 +68,4 @@ export class SearchServiceService {
     return myPromise;
   }
 
-// gitRepos(searchName) {
-//   console.log("here i am "+searchName)
-//   interface ApiResponse {
-//       items: any;
-//   }
-
-//   const promise = new Promise((resolve, reject) => {
-//       this.http.get<ApiResponse>('https://api.github.com/search/repositories?q=' + searchName + ' &per_page=10 ' + environment.apiKey).toPromise().then(getRepoResponse => {
-//           this.searchRepo = getRepoResponse.items;
-//           console.log(this.searchRepo)
-//           resolve();
-//       }, error => {
-//           this.searchRepo = 'error';
-//           reject(error);
-//       });
-//   });
-//   return promise;
-// }
 }

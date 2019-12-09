@@ -11,22 +11,22 @@
           <strong>Username :</strong> {{ username.login }}
         </li>
         <li class="list-group-item">
-          <strong>Profile :</strong> {{ username.html_url }}
+          <strong>Profile :</strong> <a CapitalizeAndColorLink href="{{ username.html_url }}"> Visit GitHub Profile</a>
         </li>
         <li class="list-group-item">
           <strong># of Repos :</strong> {{ username.public_repos }}
         </li>
         <li class="list-group-item">
-          <strong>Date Created :</strong> {{ username.created_at }}
+          <strong>Date Created :</strong> {{ username.created_at | date }}
         </li>
       </ul>
-      <button type="button" class="btn btn-warning" routerLink="/main-page"> Go Back to Search</button>
+      <button type="button" class="btn btn-warning" routerLink="/main-page"> Go Back</button>
     </div>
   </div>
     <div class="col-md-8">
       <h1>Repositories</h1>
       <div
-        class="card"
+        class="card "
         id="repo"
         *ngFor="let repository of repositories"
       >
@@ -40,10 +40,10 @@
             <strong>Description :</strong> {{ repository.description }}
           </li>
           <li class="list-group-item">
-            <strong>Url :</strong> {{ repository.html_url }}
+            <strong>Url :</strong> <a CapitalizeAndColorLink href="{{ repository.html_url }}"> Visit {{ repository.name }} Repository</a>
           </li>
           <li class="list-group-item">
-            <strong>Date Created :</strong> {{ repository.created_at }}
+            <strong>Date Created :</strong> {{ repository.created_at | date }}
           </li>
         </ul>
       </div>

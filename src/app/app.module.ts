@@ -1,3 +1,4 @@
+import { DateCountPipe } from './date.pipe';
 import { SearchServiceService } from './search-service.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -10,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DetailsComponent } from './details/details.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { CapitalizeDirective } from './capitalize.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     DisplayUserComponent,
     DetailsComponent,
     MainPageComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    DateCountPipe,
+    CapitalizeDirective
   ],
   imports: [
     BrowserModule,
