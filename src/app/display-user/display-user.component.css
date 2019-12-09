@@ -4,3 +4,13 @@
 button{
   margin: 5% 30%;
 }
+
+h1, h5, strong{
+  color: rgb(238, 204, 10);
+  font-weight: bold;
+  text-align: center;
+}
+
+p {
+  text-transform: uppercase;
+}
